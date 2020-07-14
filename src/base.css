@@ -142,6 +142,10 @@ input:hover {
   cursor: pointer;
 }
 
+.new-todo:focus {
+  border: 1px solid rgb(177, 171, 171);
+}
+
 @media (min-width: 899px) {
   .learn-bar {
     width: auto;

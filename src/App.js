@@ -80,27 +80,27 @@ class App extends React.Component {
   }
 
   showActive = () => {
-    (this.setState(() => ({
+    this.setState(() => ({
       selected: 'active',
       hideCompleted: true,
       hideActive: false,
-    })));
+    }));
   }
 
   showAll = () => {
-    (this.setState(() => ({
+    this.setState(() => ({
       hideCompleted: false,
       hideActive: false,
       selected: 'all',
-    })));
+    }));
   }
 
   showCompleted = () => {
-    (this.setState(() => ({
+    this.setState(() => ({
       hideCompleted: false,
       hideActive: true,
       selected: 'completed',
-    })));
+    }));
   }
 
   selectAll = () => {
