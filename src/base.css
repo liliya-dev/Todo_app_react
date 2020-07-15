@@ -141,9 +141,11 @@ button:hover {
 input:hover {
   cursor: pointer;
 }
-
+.new-todo {
+  transition: 1s background-color;
+}
 .new-todo:focus {
-  border: 1px solid rgb(177, 171, 171);
+  background-color: #f1f5f7;
 }
 
 @media (min-width: 899px) {

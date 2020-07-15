@@ -57,7 +57,7 @@ class App extends React.Component {
 
   addNewTodo = (valid) => {
     if (valid) {
-      (this.setState(prevState => ({
+      this.setState(prevState => ({
         todoList: (!prevState.todoList.includes(prevState.inputValue.trim()))
           ? [...prevState.todoList, prevState.inputValue.trim()]
           : [...prevState.todoList],
@@ -67,7 +67,7 @@ class App extends React.Component {
           [prevState.inputValue]: false,
         },
         allSelected: false,
-      })));
+      }));
     }
   };
 
@@ -104,15 +104,15 @@ class App extends React.Component {
   }
 
   selectAll = () => {
-    const obj = {};
+    const temporaryCompleted = {};
 
     this.state.todoList.forEach((key) => {
-      obj[key] = !this.state.allSelected;
+      temporaryCompleted[key] = !this.state.allSelected;
     });
 
     this.setState(prevState => ({
       allSelected: !prevState.allSelected,
-      completedTodos: { ...obj },
+      completedTodos: { ...temporaryCompleted },
     }));
   }
 
